@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="My personal WilliPedia!" name="description"/>
+<meta content="William" name="author"/>
+<link href="https://silent-yell.nl/willipedia/superset/superset/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Superset - WilliPedia</title>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
+<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet"/>
+<link href="../../css/base.min.css" rel="stylesheet"/>
+<link href="../../css/cinder.min.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/night-owl.min.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Collapsed navigation -->
+<div class="navbar-header">
+<!-- Expander button -->
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- Main title -->
+<a class="navbar-brand" href="../..">WilliPedia</a>
+</div>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li>
+<a href="../..">Home</a>
+</li>
+<li>
+<a href="../../home/about/">About</a>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">linux <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../linux/systemd/">systemd</a>
+</li>
+<li>
+<a href="../../linux/bash/">bash</a>
+</li>
+<li>
+<a href="../../linux/firewalld/">firewalld</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansible <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../ansible/ansible/">ansible</a>
+</li>
+<li>
+<a href="../../ansible/jinja/">Jinja</a>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Superset <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="active">
+<a href="./">Superset</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href="../../ansible/jinja/" rel="prev">
+<i class="fas fa-arrow-left"></i> Previous
+                        </a>
+</li>
+<li class="disabled">
+<a rel="next">
+                            Next <i class="fas fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+<ul class="nav bs-sidenav">
+<li class="first-level active"><a href="#superset">Superset</a></li>
+<li class="second-level"><a href="#public-dash-read-rights">Public dash read rights:</a></li>
+<li class="second-level"><a href="#ldap-in-docker">LDAP in docker</a></li>
+<li class="second-level"><a href="#requirements_local">REQUIREMENTS_LOCAL</a></li>
+<li class="second-level"><a href="#basic-ldap-config">Basic ldap config</a></li>
+</ul>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="superset">Superset</h1>
+<h3 id="public-dash-read-rights">Public dash read rights:</h3>
+<hr/>
+<p>To allow all public to read things you need these rights:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rights:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>can read on SavedQuery</td>
+</tr>
+<tr>
+<td>2</td>
+<td>can read on CssTemplate</td>
+</tr>
+<tr>
+<td>3</td>
+<td>can read on ReportSchedule</td>
+</tr>
+<tr>
+<td>4</td>
+<td>can read on Chart</td>
+</tr>
+<tr>
+<td>5</td>
+<td>can read on Annotation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>can read on Dataset</td>
+</tr>
+<tr>
+<td>7</td>
+<td>can read on Log</td>
+</tr>
+<tr>
+<td>8</td>
+<td>can read on Dashboard</td>
+</tr>
+<tr>
+<td>9</td>
+<td>can read on Database</td>
+</tr>
+<tr>
+<td>10</td>
+<td>can read on Query</td>
+</tr>
+<tr>
+<td>11</td>
+<td>can read on DashboardFilterStateRestApi</td>
+</tr>
+<tr>
+<td>12</td>
+<td>can read on ExploreFormDataRestApi</td>
+</tr>
+<tr>
+<td>13</td>
+<td>can list on FilterSets</td>
+</tr>
+<tr>
+<td>14</td>
+<td>can fave slices on Superset</td>
+</tr>
+<tr>
+<td>15</td>
+<td>can favstar on Superset</td>
+</tr>
+<tr>
+<td>16</td>
+<td>can request access on Superset</td>
+</tr>
+<tr>
+<td>17</td>
+<td>can explore on Superset</td>
+</tr>
+<tr>
+<td>18</td>
+<td>can filter on Superset</td>
+</tr>
+<tr>
+<td>19</td>
+<td>can explore json on Superset</td>
+</tr>
+<tr>
+<td>20</td>
+<td>can fave dashboards on Superset</td>
+</tr>
+<tr>
+<td>21</td>
+<td>can dashboard on Superset</td>
+</tr>
+<tr>
+<td>22</td>
+<td>can fave dashboards by username on Superset</td>
+</tr>
+<tr>
+<td>23</td>
+<td>can recent activity on Superset</td>
+</tr>
+<tr>
+<td>24</td>
+<td>can read on SecurityRestApi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ldap-in-docker">LDAP in docker</h3>
+<hr/>
+<p>In your superset git root, edit:
+<code>vim docker/docker-bootstrap.sh</code>
+add:</p>
+<pre><code class="language-bash"> apt-get install libldap2-dev python-dev libssl-dev python3-dev libsasl2-dev -y
+</code></pre>
+<p>on line 34, so it looks like:</p>
+<pre><code class="language-bash">if [ -f "${REQUIREMENTS_LOCAL}" ]; then
+  echo "Installing local overrides at ${REQUIREMENTS_LOCAL}"
+  apt-get install libldap2-dev python-dev libssl-dev python3-dev libsasl2-dev -y
+  pip install -r "${REQUIREMENTS_LOCAL}"
+else
+  echo "Skipping local overrides"
+fi
+</code></pre>
+<div class="bs-callout bs-callout-info">
+<h4>Note</h4>
+This file is not in the git ignore, so you might have to remove it to get get a new master pull and add it back 😒
+</div>
+<h3 id="requirements_local">REQUIREMENTS_LOCAL</h3>
+<hr/>
+<p>This file is found here: <code>vim ./docker/requirements-local.txt</code>
+and should contain <code>python-ldap</code></p>
+<p>LDAP can now be configured.</p>
+<h3 id="basic-ldap-config">Basic ldap config</h3>
+<hr/>
+<pre><code class="language-python"># Active directory connection
+from flask_appbuilder.security.manager import AUTH_LDAP
+AUTH_TYPE                   = AUTH_LDAP
+AUTH_LDAP_SERVER            = "ldap://ad.lan:389"
+AUTH_LDAP_SEARCH            = ""
+AUTH_LDAP_BIND_USER         = ""
+AUTH_LDAP_BIND_PASSWORD     = ""
+AUTH_LDAP_UID_FIELD         = "sAMAccountName"
+AUTH_LDAP_USE_TLS           = False
+AUTH_USER_REGISTRATION      = True
+AUTH_USER_REGISTRATION_ROLE = "Public"
+AUTH_ROLES_MAPPING = {
+    "": ["Admin"],
+    "": ["Alpha"],
+    "": ["Gamma"],
+}
+AUTH_ROLES_SYNC_AT_LOGIN    = True
+</code></pre></div>
+</div>
+<footer class="col-md-12 text-center">
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/bootstrap-3.0.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>var base_url = "../.."</script>
+<script src="../../js/base.js"></script>
+<div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
