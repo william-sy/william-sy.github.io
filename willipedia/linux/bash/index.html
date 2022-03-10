@@ -205,13 +205,14 @@ if [[ ${LMONTH} == "12" ]]; then
 fi
 </code></pre>
 <h3 id="pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</h3>
-<p><code>#!/usr/bin/env bash
-for DIR in $(ls ~/precima/); do
+<pre><code class="language-bash">#!/usr/bin/env bash
+for DIR in $(ls ~/all_your_repos/); do
     printf "${LINE}\n"
-    cd ~/precima/${DIR}
+    cd ~/all_your_repos/${DIR}
     pwd
     git pull
-done</code></p></div>
+done
+</code></pre></div>
 </div>
 <footer class="col-md-12 text-center">
 </footer>
