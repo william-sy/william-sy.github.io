@@ -7,9 +7,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="My personal WilliPedia!" name="description"/>
 <meta content="William" name="author"/>
-<link href="https://silent-yell.nl/willipedia/linux/bash/" rel="canonical"/>
+<link href="https://silent-yell.nl/willipedia/bookmarks/bookmarks/" rel="canonical"/>
 <link href="../../img/favicon.ico" rel="shortcut icon"/>
-<title>bash - WilliPedia</title>
+<title>Bookmarks - WilliPedia</title>
 <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
 <link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
 <link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
@@ -50,17 +50,17 @@
 <li>
 <a href="../../home/about/">About</a>
 </li>
-<li class="dropdown active">
+<li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">linux <b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li>
-<a href="../systemd/">systemd</a>
-</li>
-<li class="active">
-<a href="./">bash</a>
+<a href="../../linux/systemd/">systemd</a>
 </li>
 <li>
-<a href="../firewalld/">firewalld</a>
+<a href="../../linux/bash/">bash</a>
+</li>
+<li>
+<a href="../../linux/firewalld/">firewalld</a>
 </li>
 </ul>
 </li>
@@ -83,23 +83,23 @@
 </li>
 </ul>
 </li>
-<li class="dropdown">
+<li class="dropdown active">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bookmarks <b class="caret"></b></a>
 <ul class="dropdown-menu">
-<li>
-<a href="../../bookmarks/bookmarks/">Bookmarks</a>
+<li class="active">
+<a href="./">Bookmarks</a>
 </li>
 </ul>
 </li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-<a href="../systemd/" rel="prev">
+<a href="../../superset/superset/" rel="prev">
 <i class="fas fa-arrow-left"></i> Previous
                         </a>
 </li>
-<li>
-<a href="../firewalld/" rel="next">
+<li class="disabled">
+<a rel="next">
                             Next <i class="fas fa-arrow-right"></i>
 </a>
 </li>
@@ -110,108 +110,15 @@
 <div class="container">
 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
 <ul class="nav bs-sidenav">
-<li class="first-level active"><a href="#aliases-that-have-come-in-handy">Aliases that have come in handy</a></li>
-<li class="first-level"><a href="#azure-switcher">Azure switcher</a></li>
-<li class="first-level"><a href="#kubernetes-context-switcher">Kubernetes context switcher</a></li>
-<li class="first-level"><a href="#calculate-the-13th-month-in-the-past">calculate the 13th month in the past</a></li>
-<li class="first-level"><a href="#pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</a></li>
+<li class="first-level active"><a href="#handy-or-cool-links-to-sites-that-i-have-been-hoarding">Handy or cool links to sites that I have been hoarding</a></li>
+<li class="second-level"><a href="#plug-my-own-sites-first">Plug my own sites first:</a></li>
 </ul>
 </div></div>
 <div class="col-md-9" role="main">
-<h1 id="aliases-that-have-come-in-handy">Aliases that have come in handy</h1>
-<pre><code class="language-bash">#
-## personal aliasses
-#
-# Go up a X amount of directories
-up() { cd $(printf "%0.s../" $(seq 1 $1 )); }
-# Commit all changes easily
-gadd() { git add . &amp;&amp; git commit -m "$1" &amp;&amp; git push }
-
-# Common typos:
-alias vd="cd $1"
-alias bim="vim $1"
-
-# This one unless you have sl installed (man of culture)
-alias sl="ls  $1"
-
-# ls aliasses
-alias ll='ls -l --color=auto'
-alias ls='ls --color=auto'
-
-#
-## Icinga 2 aliases
-#
-alias idir='cd /etc/icinga2/zones.d/'
-alias ilist='icinga2 ca list --all'
-alias ir='systemctl restart icinga2'
-alias ic='icinga2 daemon -C'
-</code></pre>
-<h1 id="azure-switcher">Azure switcher</h1>
-<p>In order to easily switch from one subscription to another within a tenant:</p>
-<pre><code class="language-bash">#!/bin/bash
-
-ENTITIES=$(az account list -o tsv | awk '{ print $6}')
-SELECTION=1
-
-while read -r line; do
-  echo "$SELECTION) $line"
-  ((SELECTION++))
-done &lt;&lt;&lt; "$ENTITIES"
-
-((SELECTION--))
-
-echo
-printf 'Select an entity from the above list: '
-read -r opt
-
-if [[ `seq 1 $SELECTION` =~ $opt ]]; then
-  choiche=$(sed -n "${opt}p" &lt;&lt;&lt; "$ENTITIES")
-   az account set -s ${choiche}
-   az account list -o table | grep True
-fi
-</code></pre>
-<h1 id="kubernetes-context-switcher">Kubernetes context switcher</h1>
-<p>The same can be done for kubernetes</p>
-<pre><code class="language-bash">#!/bin/bash
-CURRENT=$(kubectl config get-contexts | grep "*" | awk '{ print $2 }')
-printf "## Current Kube Profile\n# ${CURRENT} \n##\n\n"
-
-ENTITIES=$(kubectl config get-contexts --no-headers --output='name')
-SELECTION=1
-
-while read -r line; do
-  echo "$SELECTION) $line"
-  ((SELECTION++))
-done &lt;&lt;&lt; "$ENTITIES"
-
-((SELECTION--))
-
-echo
-printf 'Select an entity from the above list: '
-read -r opt
-
-if [[ `seq 1 $SELECTION` =~ $opt ]]; then
-  choiche=$(sed -n "${opt}p" &lt;&lt;&lt; "$ENTITIES")
-  kubectl config use-context ${choiche}
-fi
-</code></pre>
-<h1 id="calculate-the-13th-month-in-the-past">calculate the 13th month in the past</h1>
-<pre><code class="language-bash">LMONTH=$(date --date="$(date +%Y-%m-15) -1 month" +%m)
-LYEAR=$(date +%Y -d '-1 year')
-
-if [[ ${LMONTH} == "12" ]]; then
- echo "Last month was December, we need to deduct a extra year"
- LYEAR=$(date +%Y -d '-2 year')
-fi
-</code></pre>
-<h1 id="pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</h1>
-<p><code>#!/usr/bin/env bash
-for DIR in $(ls ~/precima/); do
-    printf "${LINE}\n"
-    cd ~/precima/${DIR}
-    pwd
-    git pull
-done</code></p></div>
+<h1 id="handy-or-cool-links-to-sites-that-i-have-been-hoarding">Handy or cool links to sites that I have been hoarding</h1>
+<h4 id="plug-my-own-sites-first">Plug my own sites first:</h4>
+<p><a href="https://wordless-book.nl">wordless-book</a></p>
+<p><a href="https://silent-yell.nl">Resume of William</a></p></div>
 </div>
 <footer class="col-md-12 text-center">
 </footer>
