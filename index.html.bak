@@ -86,15 +86,15 @@
             <div class="col-lg-6">
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:w.v.b@live.nl?SUBJECT=Reactie op uw CV">w.v.b@live.nl</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Linkedin:</strong> <span><a href="https://www.linkedin.com/in/william-v-beek/">William-v-Beek</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span> Available upon request</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Linkedin:</strong> <span><a href="https://www.linkedin.com/in/william-v-beek/">william-v-beek</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span> Available upon request</span></li>
 
               </ul>
             </div>
           </div>
           <p>
-            Not only do I work with computers @work but the passion continues @home playing with raspberry`s Arduino's and many more hobby's like playing guitar,
-            riding my motorcycle, playing games, 3d printing, painting, pluming, watching series, and much more there is always something to do.
+            Not only do I work with computers @work but the passion continues @home playing with rapsberry`s arduinos and many more hobbys like playing guitar,
+            riding my motorcycle, playing games, 3d printing, paiting, plumming, watching series, and much more there is always something to do.
             <p></p>
             I am always open to discuss a new role so feel free to send me a email or a linkedin message.
           </p>
@@ -119,10 +119,10 @@
           <div class="resume-item">
             <h4>Certificates</h4>
             <p>
-              <li><em><h5>2021</h5> - Microsoft - Azure fundamentals</em></li>
+              <li><em><h5>2021</h5> - Microsoft - Azure fundementals</em></li>
               <li><em><h5>2020</h5> - Cloud Guru - Python3 for sys admins</em></li>
               <li><em><h5>2020</h5> - Cloud Guru - Reliability Engineering concepts</em></li>
-              <li><em><h5>2019</h5> - NedCert - Emergency Response Officer</em></li>
+              <li><em><h5>2019</h5> - NedCert - Emergency Responce Officer</em></li>
               <li><em><h5>2017</h5> - AWS cloud practitioner Essentials (digital)</em></li>
               <li><em><h5>2014</h5> - EdX - Linux</em></li>
               <li><em><h5>2013</h5> - Dell - DSOD - servers, laptops and printers -</em></li>
@@ -148,21 +148,21 @@
           <p><em>Mac Os and Dos </em></li></p>
 
           <h4>Hardware</h4>
-          <p><em>Servers/workstations: HP, IBM, Dell, Sun, Apple</em></p>
+          <p><em>Servers/workstations: HP, IBM, Dellm, Sun, Apple</em></p>
           <p><em>Network: Microtik, ubiquity, Switches, Routers, san, nas</em></p>
           <p><em>Other: Tape robots, network printers, MFP's</em></p>
 
           <h4>Protocols</h4>
-          <p><em>Network: TCP/IP, Apple talk, WiFi, IpSec, SSH, PPTP, SSL, FTP, POP3, SMTP, IMAP</em></p>
+          <p><em>Newtwork: TCP/IP, Appletalk, WiFi, IpSec, SSH, PPTP, SSL, FTP, POP3, SMTP, IMAP</em></p>
 
           <h4>Programming</h4>
-          <p><em>HTML, XML, CSS, Ruby, Visual Basic, PHP, C#, Batch, Python3, Bash, Ansible, Terraform, YML</em></p>
+          <p><em>HTML, XML, CSS, Ruby, Visual Basic, PHP, C#, Batsh, Python3, Bash, Ansible, Terraform, YML</em></p>
 
           <h4>DevOps / Cloud / Other</h4>
           <p><em>Docker, AKS, AWS, Azure, Rundeck, Atlassian (onprem and cloud), RDS, MongoDB, MySQL, OpenDJ, MariaDB, VmWare, Active Directory, LDAP, ITIL (2 and 3), kubectl, az cli, OpenSearch, ELK, Icinga2, Grafana, Prometheus, Git, Github, Sisense, Qlik, Superset, NGINX, HTTPD</em></p>
 
           <h4>Something missing?</h4>
-          <p><em>Unfortunately I cannot list every thing I have ever worked with please see the <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">PDF</a> version of my Resume, Or shoot me a email!</em></p>
+          <p><em>Unfortunately I cannot list every thing I have ever worked with please see the <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">pdf</a> version of my Resume, Or shoot me a email!</em></p>
 
         </div>
         </div>
@@ -175,16 +175,16 @@
             <p><em>Precima - A NIQ company</em></p>
             <p>
               Precima is a company specialized in data analysis for retailers around the world,
-              Here things like automation in Ansible, Terraform (IAAC), setting up monitoring and kanban,
-              server performance, leading and supporting of coworkers is all in a day to day operation.
-              Tools include Ansible, Terraform, grafana, icinga, slack, bash, python, aws, azure, Icinga2 and much more.
+              Here things like automation in ansible, terraform (IAAC), setting up monitoring and kanban,
+              server perfomance, leading and supporting of coworkers is all in a day to day operation.
+              Tools include ansible, terraform, grafana, icinga, slack, bash, python, aws, azure, Icinga2 and much more.
             <h5>Projects</h5>
             <ul>
               <li>Lead in the design, development, and implementation of Icinga2, with grafana and alerting to pagerduty</li>
               <li>Migrate ELK with search guard to a OpenSearch stack</li>
               <li>Revise and redevelop IAAC code to be more automated with CI/CD and remove manual tasks</li>
               <li>Migrate from AWS linux1 to Centos and Rocky linux 8 to be cloud agnostic</li>
-              <li>Develop various POC's for future business cases / costs savings</li>
+              <li>Develop various POC's for future buisiness cases / costs savings</li>
             </ul>
             </p>
           </div>
@@ -194,8 +194,8 @@
             <p><em>SIDN</em></p>
             <p>
               SIDN is the company behind the '.nl' TLD.
-              Here I to managed various items like the Atlassian tool stack, Abusehub and work with tools like puppet
-              and Ansible to further automate the environment in any way possible.
+              Here I to managed various items like the atlassian toolstack, Abusehub and work with tools like puppet
+              and ansible to further automate the enverioment in any way possible.
             </p>
           </div>
           <div class="resume-item">
@@ -203,8 +203,8 @@
             <h5>01-2017 - 02-2018</h5>
             <p><em>Lukkien</em></p>
             <p>
-              Lukkien is a media company, they do commercials, Photo shoots and websites for customers.
-              Here I worked as a DevOps engineer to keep the customer sites up and running and deploying
+              Lukkien is a media company, they do commercials, Photoshoots and websites for customers.
+              Here I worked as a Devops engineer to keep the customer sites up and running and deploying
               new ones with the latest tools. Also implemented the GDPR here.
             </p>
           </div>
@@ -212,7 +212,7 @@
             <h4>DevOps Engineer</h4>
             <h5>01-2016 - 12-2016</h5>
             <p><em>iWelcome</em></p>
-            <p>More info about this role and other roles in the downloadable <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">PDF</a></p>
+            <p>More info about this role and other roles in the downloadable <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">pdf</a></p>
           </div>
           <div class="resume-item">
             <h4>system Engineer</h4>
@@ -228,7 +228,7 @@
             <h4>More info ?</h4>
             <h5>2009 - 2011</h5>
             <p><em>Other companies</em></p>
-            <p>More info is available in the downloadable <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">PDF</a></p>
+            <p>More info is available in the downloadable <a href="assets/downloads/William.van.Beek(08-20)ENGV1.pdf">pdf</a></p>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@
           <div class="info-box">
             <i class="bx bxl-linkedin"></i>
             <h3>Connect with me on linkedin</h3>
-            <p><a href="https://www.linkedin.com/in/william-v-beek/">William-v-Beek</a></p>
+            <p><a href="https://www.linkedin.com/in/william-v-beek/">william-v-beek</a></p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
