@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My personal WilliPedia!">
     <meta name="author" content="William">
-    <link rel="canonical" href="https://silent-yell.nl/willipedia/ansible/ansible/">
+    <link rel="canonical" href="https://silent-yell.nl/willipedia/windows/windows/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>ansible - WilliPedia</title>
+    <title>Windows - WilliPedia</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -120,13 +120,13 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="../../windows/windows/">Windows</a>
+<li class="active">
+    <a href="./">Windows</a>
 </li>
 
                         
@@ -135,19 +135,19 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ansible <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">ansible</a>
+<li >
+    <a href="../../ansible/ansible/">ansible</a>
 </li>
 
                         
                             
 <li >
-    <a href="../jinja/">Jinja</a>
+    <a href="../../ansible/jinja/">Jinja</a>
 </li>
 
                         
@@ -204,12 +204,12 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../../windows/windows/">
+                        <a rel="prev" href="../../linux/general/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../jinja/">
+                        <a rel="next" href="../../ansible/ansible/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -223,12 +223,20 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</a></li>
+        <li class="first-level active"><a href="#windows">Windows</a></li>
+            <li class="second-level"><a href="#create-a-local-admin-trough-powershell">Create a local admin trough powershell:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</h3></div>
+<h1 id="windows">Windows</h1>
+<h3 id="create-a-local-admin-trough-powershell">Create a local admin trough powershell:</h3>
+<pre><code>$username = &quot;user&quot;
+$password =  ConvertTo-SecureString  -AsPlainText &quot;SuperSecure123!&quot; -Force
+New-LocalUser &quot;$username&quot; -Password $password -FullName &quot;$username&quot; -Description &quot;Local admin $username&quot;
+Add-LocalGroupMember -Group &quot;Administrators&quot; -Member &quot;$username&quot;
+</code></pre></div>
         
         
     </div>

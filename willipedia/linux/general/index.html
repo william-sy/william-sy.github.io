@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My personal WilliPedia!">
     <meta name="author" content="William">
-    <link rel="canonical" href="https://silent-yell.nl/willipedia/ansible/ansible/">
+    <link rel="canonical" href="https://silent-yell.nl/willipedia/linux/general/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>ansible - WilliPedia</title>
+    <title>general - WilliPedia</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -81,37 +81,37 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">linux <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../linux/systemd/">systemd</a>
+    <a href="../systemd/">systemd</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../linux/bash/">bash</a>
+    <a href="../bash/">bash</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../linux/firewalld/">firewalld</a>
+    <a href="../firewalld/">firewalld</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../linux/zip/">zip</a>
+    <a href="../zip/">zip</a>
 </li>
 
                         
                             
-<li >
-    <a href="../../linux/general/">general</a>
+<li class="active">
+    <a href="./">general</a>
 </li>
 
                         
@@ -135,19 +135,19 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ansible <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">ansible</a>
+<li >
+    <a href="../../ansible/ansible/">ansible</a>
 </li>
 
                         
                             
 <li >
-    <a href="../jinja/">Jinja</a>
+    <a href="../../ansible/jinja/">Jinja</a>
 </li>
 
                         
@@ -204,12 +204,12 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../../windows/windows/">
+                        <a rel="prev" href="../zip/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../jinja/">
+                        <a rel="next" href="../../windows/windows/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -223,12 +223,14 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</a></li>
+        <li class="first-level active"><a href="#get-logs-from-reboot">Get logs from reboot:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</h3></div>
+<h3 id="get-logs-from-reboot">Get logs from reboot:</h3>
+<pre><code class="language-bash">journalctl -rb -1
+</code></pre></div>
         
         
     </div>

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My personal WilliPedia!">
     <meta name="author" content="William">
-    <link rel="canonical" href="https://silent-yell.nl/willipedia/ansible/ansible/">
+    <link rel="canonical" href="https://silent-yell.nl/willipedia/kubernetes/kubectl/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>ansible - WilliPedia</title>
+    <title>Kubernetes - WilliPedia</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -135,19 +135,19 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ansible <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">ansible</a>
+<li >
+    <a href="../../ansible/ansible/">ansible</a>
 </li>
 
                         
                             
 <li >
-    <a href="../jinja/">Jinja</a>
+    <a href="../../ansible/jinja/">Jinja</a>
 </li>
 
                         
@@ -171,13 +171,13 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kubernetes <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="../../kubernetes/kubectl/">Kubernetes</a>
+<li class="active">
+    <a href="./">Kubernetes</a>
 </li>
 
                         
@@ -204,12 +204,12 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../../windows/windows/">
+                        <a rel="prev" href="../../superset/superset/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../jinja/">
+                        <a rel="next" href="../../bookmarks/bookmarks/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -223,12 +223,40 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</a></li>
+        <li class="first-level active"><a href="#kubectl-tricks">Kubectl tricks</a></li>
+            <li class="second-level"><a href="#azure-node-restart">Azure node restart</a></li>
+                
+            <li class="second-level"><a href="#azure-addons">Azure AddOns:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="-sorry-there-are-0-ansible-tips-tricks-available-at-this-moment">- Sorry, there are 0 Ansible tips / tricks available at this moment</h3></div>
+<h2 id="kubectl-tricks">Kubectl tricks</h2>
+<p>Simple 101 commands:</p>
+<ul>
+<li>Get name space: <code>kubectl get namespace</code></li>
+<li>Get pods in space: <code>kubectl get pods -n default</code></li>
+<li>Get logs of a pod: <code>kubectl logs -n default PodName</code>  (add a <code>-f</code> for follow)</li>
+<li>Force restart of pod: <code>kubectl delete pods PodName -n default --grace-period=0 --force</code></li>
+</ul>
+<h3 id="azure-node-restart">Azure node restart</h3>
+<p>Source material: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-manage-cli#restart-vms-in-a-scale-set</p>
+<ul>
+<li>Get nodeResourceGroup: <code>az aks show -n AksClusterName -g ResourceGroup -o tsv --query nodeResourceGroup</code></li>
+<li>Restart a node: <code>az vmss restart -g nodeResourceGroup -n nodeName --instance-ids 1</code></li>
+</ul>
+<p>If the node does not want to restart you can do 1 out of 2 things:</p>
+<p>1: Scale the cluster up, the nodes could be in a deadlock trying to reallocate pods, hence it takes forever.
+  * <code>az aks scale -n AksClusterName -g ResourceGroup --nodepool-name agentpool -c 3</code>
+2: Force reboot the node:
+  * de-allocate the node: <code>az vmss deallocate -g nodeResourceGroup -n NodeName --instance-ids 2</code>
+  * allocate the node: <code>az vmss start -g nodeResourceGroup -n NodeName --instance-ids 2</code></p>
+<h3 id="azure-addons">Azure AddOns:</h3>
+<ul>
+<li>List: <code>az aks addon list -g ResourceGroup -n AksClusterName</code></li>
+<li>Enable item: <code>az aks enable-addons --addons azure-keyvault-secrets-provider --name AksClusterName -g ResourceGroup</code></li>
+</ul></div>
         
         
     </div>

@@ -2,52 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://silent-yell.nl/willipedia/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/ansible/ansible/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/ansible/jinja/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/bookmarks/bookmarks/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/home/about/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://silent-yell.nl/willipedia/kubernetes/kubectl/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/linux/bash/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/linux/firewalld/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://silent-yell.nl/willipedia/linux/general/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/linux/networkmanager/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://silent-yell.nl/willipedia/linux/sssd/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/linux/systemd/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://silent-yell.nl/willipedia/linux/zip/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://silent-yell.nl/willipedia/superset/superset/</loc>
-         <lastmod>2022-03-10</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://silent-yell.nl/willipedia/windows/windows/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -1,138 +1,252 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="My personal WilliPedia!" name="description"/>
-<meta content="William" name="author"/>
-<link href="https://silent-yell.nl/willipedia/linux/bash/" rel="canonical"/>
-<link href="../../img/favicon.ico" rel="shortcut icon"/>
-<title>bash - WilliPedia</title>
-<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
-<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
-<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
-<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
-<link href="../../css/bootstrap-custom.min.css" rel="stylesheet"/>
-<link href="../../css/base.min.css" rel="stylesheet"/>
-<link href="../../css/cinder.min.css" rel="stylesheet"/>
-<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/night-owl.min.css" rel="stylesheet"/>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal WilliPedia!">
+    <meta name="author" content="William">
+    <link rel="canonical" href="https://silent-yell.nl/willipedia/linux/bash/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>bash - WilliPedia</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/night-owl.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
             <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
+
+    
+
+     
 </head>
+
 <body>
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container">
-<!-- Collapsed navigation -->
-<div class="navbar-header">
-<!-- Expander button -->
-<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<!-- Main title -->
-<a class="navbar-brand" href="../..">WilliPedia</a>
-</div>
-<!-- Expanded navigation -->
-<div class="navbar-collapse collapse">
-<!-- Main navigation -->
-<ul class="nav navbar-nav">
-<li>
-<a href="../..">Home</a>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">WilliPedia</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../home/about/">About</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">linux <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../systemd/">systemd</a>
 </li>
-<li>
-<a href="../../home/about/">About</a>
-</li>
-<li class="dropdown active">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">linux <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li>
-<a href="../systemd/">systemd</a>
-</li>
+
+                        
+                            
 <li class="active">
-<a href="./">bash</a>
+    <a href="./">bash</a>
 </li>
-<li>
-<a href="../firewalld/">firewalld</a>
+
+                        
+                            
+<li >
+    <a href="../firewalld/">firewalld</a>
 </li>
-</ul>
+
+                        
+                            
+<li >
+    <a href="../zip/">zip</a>
 </li>
-<li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansible <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li>
-<a href="../../ansible/ansible/">ansible</a>
+
+                        
+                            
+<li >
+    <a href="../general/">general</a>
 </li>
-<li>
-<a href="../../ansible/jinja/">Jinja</a>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../windows/windows/">Windows</a>
 </li>
-</ul>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ansible <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../ansible/ansible/">ansible</a>
 </li>
-<li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">Superset <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li>
-<a href="../../superset/superset/">Superset</a>
+
+                        
+                            
+<li >
+    <a href="../../ansible/jinja/">Jinja</a>
 </li>
-</ul>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Superset <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../superset/superset/">Superset</a>
 </li>
-<li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">Bookmarks <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li>
-<a href="../../bookmarks/bookmarks/">Bookmarks</a>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kubernetes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../kubernetes/kubectl/">Kubernetes</a>
 </li>
-</ul>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bookmarks <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../bookmarks/bookmarks/">Bookmarks</a>
 </li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a href="../systemd/" rel="prev">
-<i class="fas fa-arrow-left"></i> Previous
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../systemd/">
+                            <i class="fas fa-arrow-left"></i> Previous
                         </a>
-</li>
-<li>
-<a href="../firewalld/" rel="next">
+                    </li>
+                    <li >
+                        <a rel="next" href="../firewalld/">
                             Next <i class="fas fa-arrow-right"></i>
-</a>
-</li>
-</ul>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-<div class="container">
-<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-<ul class="nav bs-sidenav">
-<li class="first-level active"><a href="#aliases-that-have-come-in-handy">Aliases that have come in handy</a></li>
-<li class="first-level"><a href="#azure-switcher">Azure switcher</a></li>
-<li class="first-level"><a href="#kubernetes-context-switcher">Kubernetes context switcher</a></li>
-<li class="first-level"><a href="#calculate-the-13th-month-in-the-past">Calculate the 13th month in the past</a></li>
-<li class="first-level"><a href="#pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</a></li>
-</ul>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#aliases-that-have-come-in-handy">Aliases that have come in handy</a></li>
+        <li class="first-level "><a href="#azure-switcher">Azure switcher</a></li>
+        <li class="first-level "><a href="#kubernetes-context-switcher">Kubernetes context switcher</a></li>
+        <li class="first-level "><a href="#calculate-the-13th-month-in-the-past">Calculate the 13th month in the past</a></li>
+        <li class="first-level "><a href="#pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</a></li>
+    </ul>
 </div></div>
-<div class="col-md-9" role="main">
+        <div class="col-md-9" role="main">
+
 <h3 id="aliases-that-have-come-in-handy">Aliases that have come in handy</h3>
 <pre><code class="language-bash">#
 ## personal aliasses
 #
 # Go up a X amount of directories
-up() { cd $(printf "%0.s../" $(seq 1 $1 )); }
+up() { cd $(printf &quot;%0.s../&quot; $(seq 1 $1 )); }
 # Commit all changes easily
-gadd() { git add . &amp;&amp; git commit -m "$1" &amp;&amp; git push }
+gadd() { git add . &amp;&amp; git commit -m &quot;$1&quot; &amp;&amp; git push }
 
 # Common typos:
-alias vd="cd $1"
-alias bim="vim $1"
+alias vd=&quot;cd $1&quot;
+alias bim=&quot;vim $1&quot;
 
 # This one unless you have sl installed (man of culture)
-alias sl="ls  $1"
+alias sl=&quot;ls  $1&quot;
 
 # ls aliasses
 alias ll='ls -l --color=auto'
@@ -154,9 +268,9 @@ ENTITIES=$(az account list -o tsv | awk '{ print $6}')
 SELECTION=1
 
 while read -r line; do
-  echo "$SELECTION) $line"
+  echo &quot;$SELECTION) $line&quot;
   ((SELECTION++))
-done &lt;&lt;&lt; "$ENTITIES"
+done &lt;&lt;&lt; &quot;$ENTITIES&quot;
 
 ((SELECTION--))
 
@@ -165,7 +279,7 @@ printf 'Select an entity from the above list: '
 read -r opt
 
 if [[ `seq 1 $SELECTION` =~ $opt ]]; then
-  choiche=$(sed -n "${opt}p" &lt;&lt;&lt; "$ENTITIES")
+  choiche=$(sed -n &quot;${opt}p&quot; &lt;&lt;&lt; &quot;$ENTITIES&quot;)
    az account set -s ${choiche}
    az account list -o table | grep True
 fi
@@ -173,16 +287,16 @@ fi
 <h3 id="kubernetes-context-switcher">Kubernetes context switcher</h3>
 <p>The same can be done for kubernetes</p>
 <pre><code class="language-bash">#!/bin/bash
-CURRENT=$(kubectl config get-contexts | grep "*" | awk '{ print $2 }')
-printf "## Current Kube Profile\n# ${CURRENT} \n##\n\n"
+CURRENT=$(kubectl config get-contexts | grep &quot;*&quot; | awk '{ print $2 }')
+printf &quot;## Current Kube Profile\n# ${CURRENT} \n##\n\n&quot;
 
 ENTITIES=$(kubectl config get-contexts --no-headers --output='name')
 SELECTION=1
 
 while read -r line; do
-  echo "$SELECTION) $line"
+  echo &quot;$SELECTION) $line&quot;
   ((SELECTION++))
-done &lt;&lt;&lt; "$ENTITIES"
+done &lt;&lt;&lt; &quot;$ENTITIES&quot;
 
 ((SELECTION--))
 
@@ -191,78 +305,97 @@ printf 'Select an entity from the above list: '
 read -r opt
 
 if [[ `seq 1 $SELECTION` =~ $opt ]]; then
-  choiche=$(sed -n "${opt}p" &lt;&lt;&lt; "$ENTITIES")
+  choiche=$(sed -n &quot;${opt}p&quot; &lt;&lt;&lt; &quot;$ENTITIES&quot;)
   kubectl config use-context ${choiche}
 fi
 </code></pre>
 <h3 id="calculate-the-13th-month-in-the-past">Calculate the 13th month in the past</h3>
-<pre><code class="language-bash">LMONTH=$(date --date="$(date +%Y-%m-15) -1 month" +%m)
+<pre><code class="language-bash">LMONTH=$(date --date=&quot;$(date +%Y-%m-15) -1 month&quot; +%m)
 LYEAR=$(date +%Y -d '-1 year')
 
-if [[ ${LMONTH} == "12" ]]; then
- echo "Last month was December, we need to deduct a extra year"
+if [[ ${LMONTH} == &quot;12&quot; ]]; then
+ echo &quot;Last month was December, we need to deduct a extra year&quot;
  LYEAR=$(date +%Y -d '-2 year')
 fi
 </code></pre>
 <h3 id="pull-all-your-git-repos-in-a-single-command">Pull all your git repos in a single command:</h3>
 <pre><code class="language-bash">#!/usr/bin/env bash
 for DIR in $(ls ~/all_your_repos/); do
-    printf "${LINE}\n"
+    printf &quot;${LINE}\n&quot;
     cd ~/all_your_repos/${DIR}
     pwd
     git pull
 done
 </code></pre></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-<footer class="col-md-12 text-center">
-</footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../../js/bootstrap-3.0.3.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>var base_url = "../.."</script>
-<script src="../../js/base.js"></script>
-<div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-</div>
-<div class="modal-body">
-<table class="table">
-<thead>
-<tr>
-<th style="width: 20%;">Keys</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="help shortcut"><kbd>?</kbd></td>
-<td>Open this help</td>
-</tr>
-<tr>
-<td class="next shortcut"><kbd>n</kbd></td>
-<td>Next page</td>
-</tr>
-<tr>
-<td class="prev shortcut"><kbd>p</kbd></td>
-<td>Previous page</td>
-</tr>
-<tr>
-<td class="search shortcut"><kbd>s</kbd></td>
-<td>Search</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="modal-footer">
-</div>
-</div>
-</div>
-</div>
-</body>
+    </body>
+
 </html>
