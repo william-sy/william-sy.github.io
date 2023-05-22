@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My personal WilliPedia!">
     <meta name="author" content="William">
-    <link rel="canonical" href="https://silent-yell.nl/willipedia/linux/networkmanager/">
+    <link rel="canonical" href="https://silent-yell.nl/willipedia/linux/vim/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Networkmanager - WilliPedia</title>
+    <title>vim - WilliPedia</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -81,7 +81,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">linux <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -110,8 +110,8 @@
 
                         
                             
-<li >
-    <a href="../vim/">vim</a>
+<li class="active">
+    <a href="./">vim</a>
 </li>
 
                         
@@ -209,6 +209,16 @@
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../systemd/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../zip/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
@@ -219,44 +229,34 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#network-manager">Network manager</a></li>
-            <li class="second-level"><a href="#example-problem">Example problem:</a></li>
-                
-            <li class="second-level"><a href="#the-fix">The fix:</a></li>
-                
+        <li class="first-level active"><a href="#vim-search-and-replace-words">Vim search and replace words</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="network-manager">Network manager</h2>
-<p>If you have two network cards and you want to send the data back where it came from you need to do the following steps. </p>
-<h3 id="example-problem">Example problem:</h3>
-<pre><code># Problem: 
-Resquest -&gt; NIC1   NIC2 -&gt; Response
-Resquest -&gt; NIC1   NIC1 -&gt; Response
-
-# What we want: 
-Resquest -&gt; NIC1   NIC1 -&gt; Response
-Resquest -&gt; NIC2   NIC2 -&gt; Response
-</code></pre>
-<p>This clould be a problem if you have a webserver, dns server, or a other server where one NIC is a service NIC and the other is the application NIC</p>
-<p>Note: 
-This problem only exists if you have 2 nics on different subnets, if both nics are on the same subnet this problem lies with the default route. </p>
-<h3 id="the-fix">The fix:</h3>
-<pre><code class="language-bash">ETHDEVICE=eth1
-# Create a table:
-echo 200 TableName &gt;&gt; /etc/iproute2/rt_tables
-
-# Rule: 
-nmcli connection modify ${ETHDEVICE} +ipv4.routing-rules &quot;priority 200 from 10.250.4.10 table 200&quot;
-
-# Route: 
-nmcli connection modify ${ETHDEVICE} +ipv4.routes &quot;0.0.0.0/0 10.250.4.1 table=200&quot;
-
-# Enable the connection / restart networkmanager.
-nmcli connection up ${ETHDEVICE}
-systemctl restart NetworkManager
-</code></pre></div>
+<h3 id="vim-search-and-replace-words">Vim search and replace words</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:s/foo/bar/g</code></td>
+<td>Current line only</td>
+</tr>
+<tr>
+<td><code>:%s/foo/bar/g</code></td>
+<td>All lines</td>
+</tr>
+<tr>
+<td><code>:%s/\&lt;foo\&gt;//g</code></td>
+<td>Delete word from all lines</td>
+</tr>
+</tbody>
+</table></div>
         
         
     </div>
