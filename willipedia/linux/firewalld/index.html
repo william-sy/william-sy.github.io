@@ -193,6 +193,21 @@
                 
                 
                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">recipes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../recipes/swissroll/">swiss-roll</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bookmarks <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -233,6 +248,8 @@
             <li class="second-level"><a href="#add-a-service-to-firewalld">Add a service to firewalld</a></li>
                 
                 <li class="third-level"><a href="#port-example">Port example:</a></li>
+                <li class="third-level"><a href="#port-range-example">Port range example:</a></li>
+                <li class="third-level"><a href="#ip-range-internal-communication">ip range internal communication:</a></li>
                 <li class="third-level"><a href="#ssh-example">SSH example:</a></li>
             <li class="second-level"><a href="#list-zones-services">List zones / services</a></li>
                 
@@ -253,6 +270,12 @@
 <p>A logstash file xml needs to be present in order for this to work</p>
 <h4 id="port-example">Port example:</h4>
 <pre><code class="language-bash">firewall-cmd --permanent --add-port=8123/tcp --zone=public
+</code></pre>
+<h4 id="port-range-example">Port range example:</h4>
+<pre><code class="language-bash">firewall-cmd --permanent --add-port=8123-8200/tcp --zone=public
+</code></pre>
+<h4 id="ip-range-internal-communication">ip range internal communication:</h4>
+<pre><code class="language-bash">firewall-cmd --zone=trusted --add-source=10.247.200.53/29 --permanent
 </code></pre>
 <h4 id="ssh-example">SSH example:</h4>
 <p><code>/usr/lib/firewalld/services/ssh.xml</code></p>
