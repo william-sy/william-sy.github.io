@@ -152,3 +152,7 @@ h1 {
 .search-container input[type="submit"]:hover {
     background-color: #357ae8;
 }
+.inline {
+    display: inline;
+
+}
